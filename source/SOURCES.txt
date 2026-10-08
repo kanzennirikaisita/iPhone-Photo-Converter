@@ -1,0 +1,5 @@
+libheif-js gitHead: d8ec4bc3bc5bf8055975577bccbbc7e1d7313c2d
+libheif commit: 413e2a87e6a70b3eccc3a3adc5801179dd2d9e00
+libde265: v1.0.15
+emscripten-build: v1.23.5
+fflate: 0.8.2

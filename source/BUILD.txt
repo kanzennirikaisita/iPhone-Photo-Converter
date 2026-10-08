@@ -1,0 +1,28 @@
+Runtime:
+libheif-js 1.23.5 / libheif + libde265, LGPL-3.0
+fflate 0.8.2, MIT
+All runtime JavaScript and WASM are embedded; no CDN is used.
+
+To rebuild the HTML with Python 3 (only for developers):
+cd source
+python build.py
+The result is ../index.html.
+Modify shell.html, app.js, worker.js, or vendor/*.js before rebuilding.
+No signing or integrity checks prohibit replacing the LGPL decoder.
+
+Corresponding upstream source and build scripts:
+libheif-source.tar.gz: libheif commit 413e2a87e6a70b3eccc3a3adc5801179dd2d9e00
+libde265-source.tar.gz: libde265 v1.0.15
+emscripten-build-source.tar.gz: catdad-experiments/libheif-emscripten v1.23.5
+libheif-js-source.tar.gz: npm package release's gitHead (see SOURCES.txt)
+The emscripten build archive's .github/workflows/emscripten.yml documents
+Emscripten 3.1.61 and the exact build steps. Its libheif submodule is provided
+separately above. libheif/build-emscripten.sh builds libde265 1.0.15.
+The libheif-js scripts/install.js packages the JS and embedded WASM bundle.
+
+Upstream repositories:
+https://github.com/strukturag/libheif
+https://github.com/strukturag/libde265
+https://github.com/catdad-experiments/libheif-emscripten
+https://github.com/catdad-experiments/libheif-js
+https://github.com/101arrowz/fflate
